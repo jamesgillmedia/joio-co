@@ -2,22 +2,42 @@
 <html>
   <head>
     <title>Joio Co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      body {
+      html, body {
+        height: 100%;
         margin: 0;
         padding: 0;
-        background-image: url("background.jpg");
+      }
+
+      body {
+        background-image: url('background-image.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: center center;
+        background-attachment: fixed;
       }
-      #center {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+
+      .centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
       }
-      #instagram {
+
+      .centered a {
+        color: white;
+        font-size: 48px;
+        text-decoration: none;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          background-attachment: scroll;
+        }
+      }
+    </style>
+ {
+#instagram
         color: white;
         text-decoration: none;
         font-size: 24px;
@@ -43,3 +63,4 @@
     </div>
   </body>
 </html>
+
