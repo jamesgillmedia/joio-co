@@ -132,6 +132,17 @@
     <a class="logo" href="https://www.instagram.com/co.joio/"><img src="joiocobutton.tiff" alt="Joio Co Instagram"></a>
 <!-- SnapWidget -->
 <script src="https://snapwidget.com/js/snapwidget.js"></script>
-<iframe src="https://snapwidget.com/embed/1026137" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%;" onclick="return false;"></iframe>    
+<iframe src="https://snapwidget.com/embed/1026137" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%;" id="myiframe"></iframe>
+
+<script>
+  var iframe = document.getElementById("myiframe");
+  iframe.onload = function() {
+    var iframeDoc = iframe.contentWindow.document;
+    var links = iframeDoc.getElementsByTagName("a");
+    for (var i = 0; i < links.length; i++) {
+      links[i].parentNode.removeChild(links[i]);
+    }
+  };
+</script>
   </body>
 </html>
