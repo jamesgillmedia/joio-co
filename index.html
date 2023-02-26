@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Joio Co</title>
- 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       html, body {
         height: 100%;
@@ -45,8 +45,8 @@
         right: 10px;
         width: 100px;
         height: 100px;
-        opacity: 0.6;
-        transition: opacity 0.2s ease;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
         z-index: 1;
       }
 
@@ -112,11 +112,6 @@
         }
       }
     </style>
-    <style>
-  .snapwidget-widget a {
-    display: none !important;
-  }
-</style>
   </head>
   <body>
     <div class="centered">
@@ -127,31 +122,12 @@
       <h1>Our Products</h1>
     </div>
     <a class="logo" href="https://www.instagram.com/co.joio/"><img src="joiocobutton.tiff" alt="Joio Co Instagram"></a>
+<instagram-widget username="@co.joio" grid="3x3"></instagram-widget>
+
 <!-- SnapWidget -->
 <script src="https://snapwidget.com/js/snapwidget.js"></script>
- <div id="snapwidget-container">
-<iframe id="snapwidget-iframe" src="https://snapwidget.com/embed/1026137" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
-    </div>
-    <script>
-  // Get the iframe element by its id
-  var iframe = document.getElementById('snapwidget-iframe');
+<iframe src="https://snapwidget.com/embed/1026137" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%;" onclick="return false;"></iframe>
 
-  // Wait for the iframe to load
-  iframe.onload = function() {
-    // Get the content document of the iframe
-    var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-    // Find all <a> elements inside the iframe
-    var links = iframeDoc.getElementsByTagName('a');
-
-    // Disable the links
-    for (var i = 0; i < links.length; i++) {
-      links[i].onclick = function(e) {
-        e.preventDefault();
-      };
-    }
-  };
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/@co.joio/webcomponent-instagram-widget@latest/dist/lib/en/instagram-widget.min.js"></script>
   </body>
 </html>
