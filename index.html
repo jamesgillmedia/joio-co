@@ -1,75 +1,139 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joio Co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
-body {
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-}
+      body {
+        background-image: url('background.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+      }
 
-.centered {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding: 0 50px;
-}
+      .centered {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 0 50px;
+      }
 
-.centered a {
-  color: white;
-  font-size: 48px;
-  text-decoration: none;
-  margin-bottom: 20px;
-}
+      .centered a {
+        color: white;
+        font-size: 48px;
+        text-decoration: none;
+        margin-bottom: 20px;
+      }
 
-.centered p {
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  margin: 0;
-  line-height: 1.2;
-}
+      .centered p {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+        line-height: 1.2;
+      }
 
-/* Dropdown Menu */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin-top: 20px;
-}
+      /* Dropdown Menu */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+      }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  min-width: 160px;
-  z-index: 1;
-}
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        min-width: 160px;
+        z-index: 1;
+      }
 
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+      .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
 
-/* Button */
-.button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
-  background-image: url('joioco_button.png');
-  background-size: cover;
-  cursor: pointer;
-}
+      /* Button */
+      .button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        background-image: url('joioco_button.png');
+        background-size: cover;
+        cursor: pointer;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          background-attachment: scroll;
+        }
+
+        .centered a {
+          font-size: 36px;
+          margin-bottom: 10px;
+        }
+
+        .centered p {
+          font-size: 16px;
+        }
+
+        .button {
+          width: 20px;
+          height: 20px;
+        }
+
+        .dropdown-content a {
+          font-size: 16px;
+          padding: 8px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="centered">
+      <a href="https://www.instagram.com/co.joio/">Joio Co</a>
+      <p>We create handcrafted culinary and coffee products that inspire joy in everyday life. Our nifty creations are designed to bring a smile to your face, even without the coffee (although we highly recommend it!).</p>
+      <div class="dropdown">
+        <div class="button"></div>
+        <div class="dropdown-content">
+          <a href="https://www.instagram.com/co.joio/">Instagram</a>
+          <a href="#">Shop (Coming Soon)</a>
+          <a href="#">About</a>
+          <a href="#">Upcoming Events</a>
+        </div>
+      </div>
+    </div>
+    <script>
+     // Toggle Dropdown Menu
+var button = document.querySelector('.button');
+var dropdown = document.querySelector('.dropdown-content');
+
+button.addEventListener('click', function() {
+  dropdown.classList.toggle('show');
+});
+
+// Close Dropdown Menu when clicking outside of it
+window.addEventListener('click', function(event) {
+  if (!event.target.matches('.button')) {
+    if (dropdown.classList.contains('show')) {
+      dropdown.classList.remove('show');
+    }
+  }
+});
