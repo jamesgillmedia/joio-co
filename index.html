@@ -39,6 +39,39 @@
         margin: 0 5px;
       }
 
+      .dropdown {
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        padding: 10px;
+        display: none;
+      }
+
+      .dropdown a {
+        display: block;
+        margin: 5px;
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+      }
+
+      .button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        background-image: url('joioco_button.png');
+        background-size: cover;
+        cursor: pointer;
+      }
+
+      .button:hover + .dropdown {
+        display: block;
+      }
+
       @media (max-width: 600px) {
         body {
           background-attachment: scroll;
@@ -50,6 +83,13 @@
     <div class="centered">
       <a href="https://www.instagram.com/co.joio/">Joio Co</a>
       <p>We create handcrafted culinary and coffee products that inspire joy in everyday life. Our nifty creations are designed to bring a smile to your face, even without the coffee (although we highly recommend it!).</p>
+      <div class="button"></div>
+      <div class="dropdown">
+        <a href="https://www.instagram.com/co.joio/">Instagram</a>
+        <a href="#">Shop (Coming Soon)</a>
+        <a href="#">About</a>
+        <a href="#">Upcoming Events</a>
+      </div>
     </div>
   </body>
 </html>
