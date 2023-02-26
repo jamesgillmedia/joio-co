@@ -1,95 +1,75 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Joio Co</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-      body {
-        background-image: url('background.jpg');
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-      }
+body {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
 
-      .centered {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-      }
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 50px;
+}
 
-      .centered a {
-        color: white;
-        font-size: 48px;
-        text-decoration: none;
-        margin-bottom: 20px;
-      }
+.centered a {
+  color: white;
+  font-size: 48px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
 
-      .centered p {
-        color: white;
-        font-size: 20px;
-        text-align: center;
-        margin: 0 5px;
-      }
+.centered p {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
+}
 
-      .dropdown {
-        position: absolute;
-        top: 70px;
-        right: 10px;
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
-        padding: 10px;
-        display: none;
-      }
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
 
-      .dropdown a {
-        display: block;
-        margin: 5px;
-        font-size: 20px;
-        color: black;
-        text-decoration: none;
-      }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  min-width: 160px;
+  z-index: 1;
+}
 
-      .button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 30px;
-        height: 30px;
-        background-image: url('joioco_button.png');
-        background-size: cover;
-        cursor: pointer;
-      }
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-      .button:hover + .dropdown {
-        display: block;
-      }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-      @media (max-width: 600px) {
-        body {
-          background-attachment: scroll;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="centered">
-      <a href="https://www.instagram.com/co.joio/">Joio Co</a>
-      <p>We create handcrafted culinary and coffee products that inspire joy in everyday life. Our nifty creations are designed to bring a smile to your face, even without the coffee (although we highly recommend it!).</p>
-      <div class="button"></div>
-      <div class="dropdown">
-        <a href="https://www.instagram.com/co.joio/">Instagram</a>
-        <a href="#">Shop (Coming Soon)</a>
-        <a href="#">About</a>
-        <a href="#">Upcoming Events</a>
-      </div>
-    </div>
-  </body>
-</html>
+/* Button */
+.button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-image: url('joioco_button.png');
+  background-size: cover;
+  cursor: pointer;
+}
