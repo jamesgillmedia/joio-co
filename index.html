@@ -139,7 +139,28 @@
 <!-- SnapWidget -->
 <script src="https://snapwidget.com/js/snapwidget.js"></script>
  <div id="snapwidget-container">
-      <iframe src="https://snapwidget.com/embed/1026137" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+<iframe id="snapwidget-iframe" src="https://snapwidget.com/embed/1026137" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
     </div>
+    <script>
+  // Get the iframe element by its id
+  var iframe = document.getElementById('snapwidget-iframe');
+
+  // Wait for the iframe to load
+  iframe.onload = function() {
+    // Get the content document of the iframe
+    var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+    // Find all <a> elements inside the iframe
+    var links = iframeDoc.getElementsByTagName('a');
+
+    // Disable the links
+    for (var i = 0; i < links.length; i++) {
+      links[i].onclick = function(e) {
+        e.preventDefault();
+      };
+    }
+  };
+</script>
+
   </body>
 </html>
