@@ -2,12 +2,16 @@
 <html>
   <head>
     <title>Joio Co</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      .snapwidget-widget a {
-        color: transparent !important;
-        text-shadow: none !important;
-      }
- 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#snapwidget-container .snapwidget-widget').on('load', function() {
+          $(this).contents().find('a').on('click', function(event) {
+            event.preventDefault(); // prevent the default behavior (i.e., clicking the link)
+          });
+        });
+      });
+    </script>
     <style>
       html, body {
         height: 100%;
@@ -134,17 +138,8 @@
     <a class="logo" href="https://www.instagram.com/co.joio/"><img src="joiocobutton.tiff" alt="Joio Co Instagram"></a>
 <!-- SnapWidget -->
 <script src="https://snapwidget.com/js/snapwidget.js"></script>
-<iframe src="https://snapwidget.com/embed/1026137" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;" referrerpolicy="no-referrer"></iframe>
-
-<script>
-  var iframe = document.getElementById("myiframe");
-  iframe.onload = function() {
-    var iframeDoc = iframe.contentWindow.document;
-    var links = iframeDoc.getElementsByTagName("a");
-    for (var i = 0; i < links.length; i++) {
-      links[i].parentNode.removeChild(links[i]);
-    }
-  };
-</script>
+ <div id="snapwidget-container">
+      <iframe src="https://snapwidget.com/embed/1026137" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+    </div>
   </body>
 </html>
