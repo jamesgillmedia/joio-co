@@ -2,20 +2,8 @@
 <html>
   <head>
     <title>Joio Co</title>
-<script>
-  var snapwidget = document.querySelector('.snapwidget-widget');
-  if (snapwidget) {
-    snapwidget.addEventListener('load', function() {
-      var iframeDoc = snapwidget.contentDocument || snapwidget.contentWindow.document;
-      var links = iframeDoc.getElementsByTagName('a');
-      for (var i = 0; i < links.length; i++) {
-        links[i].onclick = function(event) {
-          event.preventDefault();
-        }
-      }
-    });
-  }
-</script>
+<meta http-equiv="Content-Security-Policy" content="frame-src https://snapwidget.com/">
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
