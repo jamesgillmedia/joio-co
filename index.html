@@ -27,7 +27,7 @@
 
       .centered a {
         color: white;
-        font-size: 48px;
+        font-size: 64px;
         text-decoration: none;
         margin-bottom: 20px;
       }
@@ -43,8 +43,8 @@
         position: fixed;
         top: 10px;
         right: 10px;
-        width: 30px;
-        height: 30px;
+        width: 60px;
+        height: 60px;
         opacity: 0.8;
         transition: opacity 0.3s ease;
         z-index: 1;
@@ -72,12 +72,29 @@
         align-items: center;
         text-align: center;
         color: white;
+        position: relative;
       }
 
       .parallax h1 {
         font-size: 64px;
         margin: 0;
         padding: 0;
+        z-index: 2;
+      }
+
+      .parallax:before {
+        content: '';
+        background-image: url('parallax.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 200%;
+        width: 100%;
+        position: absolute;
+        top: -50%;
+        left: 0;
+        z-index: -1;
       }
 
       @media (max-width: 600px) {
