@@ -123,6 +123,16 @@
     transform: rotate(360deg);
   }
 }
+<div class="logo-wrapper">
+  <a href="https://www.instagram.com/co.joio/" class="logo-link">
+    <img src="joiocobutton.tiff" alt="Joio Co Instagram" class="logo">
+  </a>
+  <div class="dropdown-menu">
+    <a href="https://www.instagram.com/co.joio/">Instagram</a>
+    <a href="#">Shop (Coming Soon)</a>
+    <a href="#about">About</a>
+  </div>
+</div>
 
     </style>
   </head>
@@ -135,6 +145,12 @@
       <h1>Our Products</h1>
        <p>Shop coming soon, meanwhile follow us on Instagram for updates!</p>
     </div>
+    
+   <div id="about">
+  <h2>About Us</h2>
+  <p>We are Joio Co, a team of passionate culinary and coffee enthusiasts who create handcrafted products that inspire joy in everyday life. Our nifty creations are designed to bring a smile to your face, even without the coffee (although we highly recommend it!).</p>
+</div>
+
     <a class="logo" href="https://www.instagram.com/co.joio/"><img src="joiocobutton.tiff" alt="Joio Co Instagram"></a>
 <instagram-widget username="@co.joio" grid="3x3"></instagram-widget>
 
@@ -143,5 +159,56 @@
 <iframe src="https://snapwidget.com/embed/1026137" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; pointer-events:none;" onclick="return false;"></iframe>
 
 <script src="https://cdn.jsdelivr.net/npm/@co.joio/webcomponent-instagram-widget@latest/dist/lib/en/instagram-widget.min.js"></script>
+ 
+    .logo-wrapper {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.logo-link {
+  display: block;
+  opacity: 0.7;
+  background-color: lightgray;
+  width: 100px;
+  height: 100px;
+  transition: opacity 0.9s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.9;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 150px;
+  background-color: lightgray;
+  display: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: darkgray;
+}
+
+.logo-wrapper:hover .dropdown-menu {
+  display: block;
+}
+
+  
   </body>
 </html>
