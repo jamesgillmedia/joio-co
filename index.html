@@ -156,7 +156,24 @@ img {
   object-fit: contain;
   margin-bottom: 100px;
 }
+  .instagram-overlay {
+    position: absolute;
+    top: 150px;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+    z-index: 2;
+    cursor: pointer;
+  }
 
+  @media (max-width: 600px) {
+  .instagram-overlay {
+      top: 80px;
+      width: 100px;
+      height: 100px;
+    }
+  }
     </style>
   </head>
   <body>
@@ -171,7 +188,7 @@ img {
     <br>
 </div>
 
-
+<div class="instagram-overlay" onclick="window.location.href='https://www.instagram.com/co.joio/'"></div>
     
     <a class="logo" href="https://www.instagram.com/co.joio/"><img src="joiocobutton.tiff" alt="Joio Co Instagram"></a>
 <instagram-widget username="@co.joio" grid="3x3"></instagram-widget>
