@@ -130,3 +130,21 @@ footer {
   text-align: center;
   padding: 20px 0;
   position
+footer {
+  background: transparent;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer div {
+  margin: auto;
+  width: 80%;
+}
+
+footer h1, footer p {
+  margin: 5px 0;
+}
