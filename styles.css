@@ -1,69 +1,74 @@
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
-
 .centered {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .centered a {
-    color: white;
-    font-size: 64px;
-    text-decoration: none;
-    margin-bottom: 20px;
+  color: white;
+  font-size: 64px;
+  text-decoration: none;
+  margin-bottom: 20px;
 }
 
 .centered p {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    margin: 0 5px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 5px;
 }
 
 .logo {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    width: 100px;
-    height: 100px;
-    opacity: 0.7;
-    transition: opacity 0.9s ease;
-    z-index: 1;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+  opacity: 0.7;
+  transition: opacity 0.9s ease;
+  z-index: 1;
 }
 
 .logo:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 .logo img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .snapwidget-widget {
-    margin-top: 20px;
-    height: 50vh; /* Adjust this value as needed */
+  width: 100%;
+  margin: 0 auto;
 }
 
 footer {
-    background: transparent;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
+  background: transparent;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
 }
 
-#footer-title, #title {
-    font-family: 'Open Sans', sans-serif;
+footer div {
+  margin: auto;
+  width: 80%;
+}
+
+footer h1, footer p {
+  margin: 5px 0;
 }
