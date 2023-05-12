@@ -8,6 +8,7 @@ html, body {
     background-attachment: fixed;
 }
 
+
 .centered {
     display: flex;
     flex-direction: column;
