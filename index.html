@@ -3,136 +3,138 @@
   <head>
     <title>joio.co</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
-      body {
-        background-color: transparent;
-        text-align: center;
-        padding: 20px;
-      }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-      h1#title {
-        color: white;
-        cursor: pointer;
-        transition: color 0.3s ease;
-      }
+  body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
 
-      h1#title:hover {
-        color: white;
-      }
+  .centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 
-      body {
-        background-image: url('background.jpg');
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-      }
+  .centered a {
+    color: white;
+    font-size: 64px;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
 
-      .centered {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-      }
+  .centered p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 5px;
+  }
 
-      .centered a {
-        color: white;
-        font-size: 64px;
-        text-decoration: none;
-        margin-bottom: 20px;
-      }
+  .logo {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    opacity: 0.7;
+    transition: opacity 0.9s ease;
+    z-index: 1;
+  }
 
-      .centered p {
-        color: white;
-        font-size: 20px;
-        text-align: center;
-        margin: 0 5px;
-      }
+  .logo:hover {
+    opacity: 0.9;
+  }
 
-      .logo {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        width: 100px;
-        height: 100px;
-        opacity: 0.7;
-        transition: opacity 0.9s ease;
-        z-index: 1;
-      }
+  .logo img {
+    width: 100%;
+    height: 100%;
+  }
 
-      .logo:hover {
-        opacity: 0.9;
-      }
+  .parallax {
+    background-image: url('background2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+  }
 
-      .logo img {
-        width: 100%;
-        height: 100%;
-      }
+  .parallax h1 {
+    font-size: 64px;
+    margin: 50px;
+    padding: 0;
+    z-index: 2;
+  }
 
-      .parallax {
-        background-image: url('background2.jpg');
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: #FFFFFF;
-        position: relative;
-      }
+  .parallax:before {
+    content: '';
+    background-image: url('background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200%;
+    width: 100%;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    z-index: -1;
+  }
 
-      .parallax h1 {
-        font-size: 64px;
-        margin: 50px;
-        padding: 0;
-        z-index: 2;
-      }
+  @media (max-width: 600px) {
+    body {
+      background-image: url('background1.jpg');
+      background-attachment: scroll;
+    }
+    .centered a {
+      font-size: 34px;
+    }
+    .centered p {
+      font-size: 16px;
+    }
+    .parallax h1 {
+      font-size: 32px;
+    }
+  }
 
-      .parallax:before {
-        content: '';
-        background-image: url('background.jpg');
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 200%;
-        width: 100%;
-        position: absolute;
-        top: -50%;
-        left: 0;
-        z-index: -1;
-      }
-
-      @media (max-width: 600px) {
-        body {
-          background-image: url('background1.jpg');
-          background-attachment: scroll;
-        }
-        .centered a {
-          font-size: 34px;
-        }
-        .centered p {
-          font-size: 16px;
-        }
-        .parallax h1 {
-          font-size: 32px;
-        }
-      }
-
-      a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: normal;
-       
-
+a.shop-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  font-size: 48px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: normal;
+  color: #FFFFFF;
 }
 
 img {
@@ -141,19 +143,6 @@ img {
   object-fit: contain;
   margin-bottom: 100px;
 }
-   footer {
-        text-align: center;
-        background-color: transparent;
-        padding: 20px;
-      }
-
-      .footer-content {
-        color: white;
-      }
-
-      .small-text {
-        color: white;
-      }
     </style>
   </head>
   <body>
@@ -162,29 +151,17 @@ img {
       <p>We create handcrafted culinary and coffee products that inspire joy in everyday life. Our nifty creations are designed to bring a smile to your face, even without the coffee (although we highly recommend it!).</p>
     </div>
 
+<div class="Shop">
+  <a href="https://www.shop.joioco.com" target="_blank"
+    <img src="joioshopbutton3.png" alt="Shop Link">
+    <br>
+</div>
     <a class="logo" href="https://www.instagram.com/co.joio/"><img src="joiocobutton.tiff" alt="joio.co Instagram"></a>
-    <instagram-widget username="@co.joio" grid="3x3"></instagram-widget>
+<instagram-widget username="@co.joio" grid="3x3"></instagram-widget>
 
-    <!-- SnapWidget -->
-    <script src="https://snapwidget.com/js/snapwidget.js"></script>
-    <iframe src="https://snapwidget.com/embed/1026137" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; pointer-events:none;" onclick="return false;"></iframe>
+<!-- SnapWidget -->
+<script src="https://snapwidget.com/js/snapwidget.js"></script>
+<iframe src="https://snapwidget.com/embed/1026137" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; pointer-events:none;" onclick="return false;"></iframe>
 
-    <footer>
-      <div class="footer-content">
-        <h1 id="title">joio.co</h1>
-        <p>© 2023 JOIO CO. All rights reserved.</p>
-        <p class="small-text">JOIO CO is also known as joio.co. Our mission is to provide you with high-quality products that inspire joy in everyday life. Whether you see us as JOIO CO or joio.co, our commitment to maximum joy remains the same.</p>
-      </div>
-    </footer>
 
-    <script>
-      const title = document.getElementById('title');
-      title.addEventListener('mouseover', function() {
-        this.textContent = 'JOIO CO';
-      });
-      title.addEventListener('mouseout', function() {
-        this.textContent = 'joio.co';
-      });
-    </script>
-  </body>
 </html>
