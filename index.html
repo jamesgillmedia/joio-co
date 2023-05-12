@@ -4,10 +4,20 @@
     <title>joio.co</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
+      body {
+        background-color: #f2f2f2;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1#title {
+        color: white;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      h1#title:hover {
+        color: white; 
       }
 
       body {
@@ -145,22 +155,23 @@ img {
   object-fit: contain;
   margin-bottom: 100px;
 }
-      footer {
-  text-align: center;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
+   footer {
+        text-align: center;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
 
-.footer-content {
-  color: white;
-}
+      .footer-content {
+        color: white;
+      }
 
-.small-text {
-  color: white;
-}
+      .small-text {
+        color: white;
+      }
     </style>
   </head>
   <body>
+    <h1 id="title">joio.co</h1>
     <div class="centered">
       <a href="https://www.instagram.com/co.joio/">joio.co</a>
       <p>We create handcrafted culinary and coffee products that inspire joy in everyday life. Our nifty creations are designed to bring a smile to your face, even without the coffee (although we highly recommend it!).</p>
@@ -178,22 +189,33 @@ img {
 <script src="https://snapwidget.com/js/snapwidget.js"></script>
 <iframe src="https://snapwidget.com/embed/1026137" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; pointer-events:none;" onclick="return false;"></iframe>
 
-<footer>
-  <div class="footer-content">
-    <h1 id="title">joio.co</h1>
-    <p>© 2023 JOIO CO. All rights reserved.</p>
-    <p class="small-text">JOIO CO is also known as joio.co Our mission is to provide you with high-quality products that insprire joy in everyday life. 
-      Whether you see us as JOIO CO or joio.co, our commitment to maximum joy remains the same.</p>
-  </div>
-</footer>
-<script>
-  const title = document.getElementById('title');
-  title.addEventListener('mouseover', function() {
-    this.textContent = 'JOIO CO';
-  });
-  title.addEventListener('mouseout', function() {
-    this.textContent = 'joio.co';
-  });
-</script>
+ <footer>
+      <div class="footer-content">
+        <h1 id="footer-title">joio.co</h1>
+        <p>© 2023 JOIO CO. All rights reserved.</p>
+        <p class="small-text">JOIO CO is also known as joio.co. Our mission is to provide you with high-quality products that inspire joy in everyday life. Whether you see us as JOIO CO or joio.co, our commitment to maximum joy remains the same.</p>
+      </div>
+    </footer>
+
+    <script>
+      const title = document.getElementById('title');
+      const footerTitle = document.getElementById('footer-title');
+
+      // Hover effect for main page title
+      title.addEventListener('mouseover', function() {
+        this.textContent = 'JOIO CO';
+      });
+      title.addEventListener('mouseout', function() {
+        this.textContent = 'joio.co';
+      });
+
+      // Hover effect for footer title
+      footerTitle.addEventListener('mouseover', function() {
+        this.textContent = 'JOIO CO';
+      });
+      footerTitle.addEventListener('mouseout', function() {
+        this.textContent = 'joio.co';
+      });
+    </script>
   </body>
 </html>
