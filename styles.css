@@ -1,37 +1,39 @@
-html, body {
+  html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+  }
+
+  body {
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-}
+  }
 
-.centered {
+  .centered {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-}
+  }
 
-.centered a {
+  .centered a {
     color: white;
     font-size: 64px;
     text-decoration: none;
     margin-bottom: 20px;
-}
+  }
 
-.centered p {
+  .centered p {
     color: white;
     font-size: 20px;
     text-align: center;
     margin: 0 5px;
-}
+  }
 
-.logo {
+  .logo {
     position: fixed;
     top: 10px;
     right: 10px;
@@ -40,19 +42,100 @@ html, body {
     opacity: 0.7;
     transition: opacity 0.9s ease;
     z-index: 1;
-}
+  }
 
-.logo:hover {
+  .logo:hover {
     opacity: 0.9;
-}
+  }
 
-.logo img {
+  .logo img {
     width: 100%;
     height: 100%;
+  }
+
+  .parallax {
+    background-image: url('background2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+  }
+
+  .parallax h1 {
+    font-size: 64px;
+    margin: 50px;
+    padding: 0;
+    z-index: 2;
+  }
+
+  .parallax:before {
+    content: '';
+    background-image: url('background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200%;
+    width: 100%;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    z-index: -1;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      background-image: url('background1.jpg');
+      background-attachment: scroll;
+    }
+    .centered a {
+      font-size: 34px;
+    }
+    .centered p {
+      font-size: 16px;
+    }
+    .parallax h1 {
+      font-size: 32px;
+    }
+  }
+
+a.shop-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  font-size: 48px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: normal;
+  color: #FFFFFF;
 }
 
-.snapwidget-widget {
-    margin-top: 20px;
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 100px;
 }
 
 footer {
@@ -60,5 +143,5 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    width: 100%;
+    width: 80%;
 }
