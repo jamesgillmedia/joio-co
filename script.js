@@ -4,4 +4,5 @@ title.addEventListener('mouseover', function() {
 });
 title.addEventListener('mouseout', function() {
   this.textContent = 'joio.co';
+<script src="script.js"></script>
 });
