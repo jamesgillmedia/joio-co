@@ -38,14 +38,9 @@ body {
   top: 10px;
   right: 10px;
   width: 100px;
-  height: 100px
-.logo {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  width: 100px;
   height: 100px;
   opacity: 0.7;
+ 
   transition: opacity 0.9s ease;
   z-index: 1;
 }
@@ -63,7 +58,6 @@ body {
   body {
     background-image: url('background1.jpg');
     background-attachment: scroll;
-    background-size: contain;
   }
   .centered a {
     font-size: 34px;
@@ -91,10 +85,10 @@ img {
 }
 
 footer {
-  font-size: 14px;
   background: transparent;
   color: white;
   text-align: center;
   padding: 20px 0;
+  size: 14px;
   width: 100%;
 }
