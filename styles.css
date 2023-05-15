@@ -92,32 +92,34 @@ footer {
   width: 100%;
 }
 
+.circle-button.button-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
 .circle-button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  overflow: hidden;
-  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0 10px;
 }
 
 .circle-button img {
-  width: 100%;
+  width: 80%;
   height: auto;
-  opacity: 0.7;
-  transition: opacity 0.9s ease;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .circle-button:hover img {
   opacity: 0.9;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
 }
 
 .affiliated-brands {
